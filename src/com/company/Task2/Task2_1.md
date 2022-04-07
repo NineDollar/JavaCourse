@@ -1,0 +1,15 @@
+1. public class MyClass(){}
+2. obj1.field1;
+3. hold=obj1.method1;
+4. private int mine=0;
+5. public int field2 = 0;
+6. public static void method2(){}
+7. public class Class2(){ Class(){} }
+8. public class Class2(){ Class(int a,int b){} } 
+9. Class1 obj1 = new Class1(); Class1 ref1;ref1=obj1;
+10. public static int s_data = 0;
+11. start(){}
+12. public abstract class IamAbstract{};
+13. public abstract boolean adstractMethod();
+14. public final class IamField{};
+15. double PIE = 3.1415926;
