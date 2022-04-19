@@ -1,6 +1,4 @@
-package com.company.Task2;
-
-import com.company.Main;
+package com.company.task2;
 
 /**
  * @ClassName Task2_3

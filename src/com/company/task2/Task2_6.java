@@ -1,4 +1,4 @@
-package com.company.Task2;
+package com.company.task2;
 
 /**
  * @ClassName Task2_6

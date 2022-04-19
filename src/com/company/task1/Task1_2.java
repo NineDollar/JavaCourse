@@ -1,4 +1,4 @@
-package com.company.Task1;
+package com.company.task1;
 
 /**
  * The type Task 1 2.

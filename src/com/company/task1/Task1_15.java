@@ -1,7 +1,4 @@
-package com.company.Task1;
-
-import java.util.Arrays;
-import java.util.Collection;
+package com.company.task1;
 
 /**
  * @ClassName Task1_15

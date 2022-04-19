@@ -1,4 +1,4 @@
-package com.company.Task2;
+package com.company.task2;
 
 import com.company.Main;
 
@@ -13,5 +13,4 @@ public class Task2_9 {
     public static void main(String[] args) {
         Object[] s = {new Main(), 12, 34.7};
     }
-
 }

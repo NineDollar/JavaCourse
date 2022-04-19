@@ -1,6 +1,4 @@
-package com.company.Task2;
-
-import java.text.Format;
+package com.company.task2;
 
 /**
  * @ClassName Task2_4

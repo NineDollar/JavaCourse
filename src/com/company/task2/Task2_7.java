@@ -1,11 +1,8 @@
-package com.company.Task2;
+package com.company.task2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @ClassName Task2_7

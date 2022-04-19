@@ -1,7 +1,4 @@
-package com.company.Task1;
-
-import java.util.*;
-import java.util.stream.Collectors;
+package com.company.task1;
 
 /**
  * @ClassName Task1_5
