@@ -174,10 +174,12 @@ public class Task2_11 {
         }
         //按照选手编号显示
         public void showById() {
+            //指定比较
             dataPerson.getAllPersons().stream().sorted(Comparator.comparing(Person::getId)).forEach(System.out::println);
         }
         //按照选手总分降序显示
         public void showByFinalScore() {
+            //使用类里的比较
             dataPerson.getAllPersons().stream().sorted().forEach(System.out::println);
         }
     }

@@ -25,8 +25,7 @@ public class Task2_7 {
 //        (2)根据学号删除学生
         studentList.removeIf(x -> "3320190993426".equals(x.getId()));
 //        (3)将所有学生年龄增加一岁
-        studentList.stream().peek(x -> x.setAge(x.getAge() + 1)).forEach(System
-                .out::println);
+        studentList.stream().peek(x -> x.setAge(x.getAge() + 1)).forEach(System.out::println);
 //        (4)将某个学生转到另一个班
         studentList.stream().filter(x -> {
             if ("3320190993426".equals(x.getId())) {
