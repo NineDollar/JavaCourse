@@ -15,11 +15,7 @@ public class Customer {
     private String email;
     private Date birth;
 
-    public Customer(int id, String name, String email, Date birth) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.birth = birth;
+    public Customer() {
     }
 
     /**
@@ -29,6 +25,14 @@ public class Customer {
      * @param birth 生日
      */
     public Customer(String name, String email, Date birth) {
+        this.name = name;
+        this.email = email;
+        this.birth = birth;
+    }
+
+
+    public Customer(int id, String name, String email, Date birth) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.birth = birth;

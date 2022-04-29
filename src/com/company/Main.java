@@ -1,7 +1,7 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * @author NineDollar
@@ -9,19 +9,29 @@ import java.util.List;
  * @since 2022/4/29
  */
 public class Main {
-  public static void main(String[] args) {
-    List<String> list = new ArrayList<>();
-    list.add("a");
-    list.add("b");
-    list.add("c");
-    list.add("d");
-    test(list);
 
+  static class MyTest {
+
+    private int id;
+    private String name;
   }
 
-  public static void test(List<String> list) {
-    list.add("e");
-    list.add("f");
-    list.stream().forEach(System.out::println);
+  public static void main(String[] args) {
+    System.out.println(myTest(MyTest.class));
+  }
+
+  private static <T> T myTest(Class<T> clazz) {
+    try {
+      return clazz.getDeclaredConstructor().newInstance();
+    } catch (InstantiationException e) {
+      e.printStackTrace();
+    } catch (IllegalAccessException e) {
+      e.printStackTrace();
+    } catch (InvocationTargetException e) {
+      e.printStackTrace();
+    } catch (NoSuchMethodException e) {
+      e.printStackTrace();
+    }
+    return null;
   }
 }
