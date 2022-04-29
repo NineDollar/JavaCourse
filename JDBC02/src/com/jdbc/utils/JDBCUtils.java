@@ -11,13 +11,11 @@ import java.util.Date;
 import java.util.Properties;
 
 /**
- * The type Jdbc utils.
+ * <p>1</p>
  *
- * @ClassName JDBCUtils
- * @Author NineDollar
- * @Date 2022 /4/28 17:41
- * @Version 1.0
- * @Description 1
+ * @author NineDollar
+ * @version 1.0
+ * @since 2022/4/29
  */
 public class JDBCUtils {
     private static String driver;
@@ -25,7 +23,7 @@ public class JDBCUtils {
     private static String username;
     private static String password;
 
-    private static Properties pro = new Properties();
+    private static final Properties pro = new Properties();
 
     static {
         try {
@@ -37,18 +35,12 @@ public class JDBCUtils {
             username = pro.getProperty("username");
             password = pro.getProperty("password");
             Class.forName(driver);
-        } catch (
-                Exception e) {
+        } catch (Exception e) {
             //e.printStackTrace();
             throw new ExceptionInInitializerError(e);
         }
     }
 
-    /**
-     * Gets connection.
-     *
-     * @return the connection
-     */
     public static Connection getConnection() {
         try {
             Class.forName(driver);
@@ -59,13 +51,6 @@ public class JDBCUtils {
         return null;
     }
 
-    /**
-     * Close.
-     *
-     * @param conn the conn
-     * @param stmt the stmt
-     * @param rs   the rs
-     */
     public static void close(Connection conn, java.sql.Statement stmt, ResultSet rs) {
         try {
             if (rs != null) {

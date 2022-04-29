@@ -3,11 +3,11 @@ package com.jdbc.bean;
 import java.sql.Date;
 
 /**
- * @ClassName Customer
- * @Author NineDollar
- * @Date 2022/4/28 22:35
- * @Version 1.0
- * @Description 2
+ * <p>2</p>
+ *
+ * @author NineDollar
+ * @version 1.0
+ * @since 2022/4/29
  */
 public class Customer {
     private int id;

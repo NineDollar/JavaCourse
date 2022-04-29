@@ -8,13 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @ClassName BaseDao
- * @Author NineDollar
- * @Date 2022/4/29 7:40
- * @Version 1.0
- * @Description 3
+ * <p>3</p>
+ *
+ * @author NineDollar
+ * @version 1.0
+ * @since 2022/4/29
  */
-public class BaseDao {
+public abstract class BaseDao {
     public void update(String sql, Object... args) {
         Connection conn = null;
         PreparedStatement ps = null;

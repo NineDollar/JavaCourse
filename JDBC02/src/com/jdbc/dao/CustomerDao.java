@@ -5,11 +5,11 @@ import com.jdbc.bean.Customer;
 import java.util.List;
 
 /**
- * @ClassName CustomerDao
- * @Author NineDollar
- * @Date 2022/4/28 22:56
- * @Version 1.0
- * @Description 4
+ * <p>4</p>
+ *
+ * @author NineDollar
+ * @version 1.0
+ * @since 2022/4/29
  */
 public interface CustomerDao {
     void add(Customer customer);
