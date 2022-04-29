@@ -8,7 +8,7 @@
 8. public class Class2(){ Class(int a,int b){} } 
 9. Class1 obj1 = new Class1(); Class1 ref1;ref1=obj1;
 10. public static int s_data = 0;
-11. start(){}
+11. static(){}
 12. public abstract class IamAbstract{};
 13. public abstract boolean adstractMethod();
 14. public final class IamField{};

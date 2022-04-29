@@ -1,15 +1,17 @@
 package com.company;
 
 public class Main {
-    public static void main(String[] args) {
-        try {
-            test();
-        } catch (Exception e) {
-            e.printStackTrace();
+
+    final class Animal {
+        private String name;
+
+        public void setName(String name) {
+            this.name = name;
         }
     }
 
-    static void test() throws Exception {
-        throw new Exception("自定义的抛出异常");
+    public static void main(String[] args) {
+
     }
+
 }
