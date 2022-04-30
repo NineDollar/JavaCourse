@@ -1,6 +1,9 @@
 package com.company.book.chapter4;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * @ClassName Question1

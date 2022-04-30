@@ -1,8 +1,6 @@
 package com.company.book.chapter4;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @ClassName Question2

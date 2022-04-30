@@ -1,9 +1,5 @@
 package com.company.book.chapter8;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * @ClassName Question4
  * @Author NineDollar

@@ -3,16 +3,16 @@ package test.com.jdbc.dao.impl;
 import com.jdbc.bean.Customer;
 import com.jdbc.dao.impl.CustomerDaoImpl;
 import com.jdbc.utils.JDBCUtils;
-import org.junit.Test;
-import org.junit.Before;
 import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * CustomerDaoImpl Tester.
  *
  * @author NineDollar
- * @since 04/29/2022
  * @version 1.0
+ * @since 04/29/2022
  */
 public class CustomerDaoImplTest {
 
@@ -26,7 +26,9 @@ public class CustomerDaoImplTest {
     System.out.println("after......");
   }
 
-  /** Method: add(Customer customer) */
+  /**
+   * Method: add(Customer customer)
+   */
   @Test
   public void testAdd() throws Exception {
     Customer customer =
@@ -36,7 +38,9 @@ public class CustomerDaoImplTest {
     System.out.println("add success");
   }
 
-  /** Method: update(Customer customer) */
+  /**
+   * Method: update(Customer customer)
+   */
   @Test
   public void testUpdate() throws Exception {
     Customer customer = new Customer(3, "李四", "lisi@qq.com", JDBCUtils.changeToData("1992-12-12"));
@@ -45,7 +49,9 @@ public class CustomerDaoImplTest {
     System.out.println("update success");
   }
 
-  /** Method: delete(int id) */
+  /**
+   * Method: delete(int id)
+   */
   @Test
   public void testDelete() throws Exception {
     CustomerDaoImpl customerDao = new CustomerDaoImpl();
@@ -53,7 +59,9 @@ public class CustomerDaoImplTest {
     System.out.println("delete success");
   }
 
-  /** Method: queryById(int id) */
+  /**
+   * Method: queryById(int id)
+   */
   @Test
   public void testQueryById() throws Exception {
     CustomerDaoImpl customerDao = new CustomerDaoImpl();
@@ -61,7 +69,9 @@ public class CustomerDaoImplTest {
     System.out.println(customer);
   }
 
-  /** Method: queryAll() */
+  /**
+   * Method: queryAll()
+   */
   @Test
   public void testQueryAll() throws Exception {
     CustomerDaoImpl customerDao = new CustomerDaoImpl();
@@ -70,7 +80,9 @@ public class CustomerDaoImplTest {
     }
   }
 
-  /** Method: getCount() */
+  /**
+   * Method: getCount()
+   */
   @Test
   public void testGetCount() throws Exception {
     CustomerDaoImpl customerDao = new CustomerDaoImpl();
