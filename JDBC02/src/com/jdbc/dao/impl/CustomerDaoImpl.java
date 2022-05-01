@@ -7,7 +7,7 @@ import com.jdbc.dao.CustomerDao;
 import java.util.List;
 
 /**
- * 5
+ * <p>5.实现数据库操作基本方法</p>
  *
  * @author NineDollar
  * @version 1.0
@@ -15,9 +15,11 @@ import java.util.List;
  */
 public class CustomerDaoImpl extends BaseDao implements CustomerDao {
 
+  // 继承后,alt+enter导入所有方法,再写代码
   @Override
   public void add(Customer customer) {
     String sql = "insert into customers(name,email,birth) values(?,?,?)";
+    // 继承了BaseDao父类方法
     update(sql, customer.getName(), customer.getEmail(), customer.getBirth());
   }
 

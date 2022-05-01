@@ -1,0 +1,71 @@
+@startuml
+participant Actor
+Actor -> AddCustomerServlet : doPost
+activate AddCustomerServlet
+AddCustomerServlet -> JDBCUtils : changeToData
+activate JDBCUtils
+JDBCUtils --> AddCustomerServlet
+deactivate JDBCUtils
+create Customer
+AddCustomerServlet -> Customer : new
+activate Customer
+Customer --> AddCustomerServlet
+deactivate Customer
+AddCustomerServlet -> CustomerDao : add
+activate CustomerDao
+CustomerDao -> CustomerDaoImpl : add
+activate CustomerDaoImpl
+CustomerDaoImpl -> JDBCUtils : getConnection
+activate JDBCUtils
+JDBCUtils --> CustomerDaoImpl
+deactivate JDBCUtils
+CustomerDaoImpl -> Customer : getName
+activate Customer
+Customer --> CustomerDaoImpl
+deactivate Customer
+CustomerDaoImpl -> Customer : getEmail
+activate Customer
+Customer --> CustomerDaoImpl
+deactivate Customer
+CustomerDaoImpl -> Customer : getBirth
+activate Customer
+Customer --> CustomerDaoImpl
+deactivate Customer
+CustomerDaoImpl -> JDBCUtils : close
+activate JDBCUtils
+JDBCUtils --> CustomerDaoImpl
+deactivate JDBCUtils
+CustomerDaoImpl -> CustomerDaoImpl : add
+activate CustomerDaoImpl
+CustomerDaoImpl -> Customer : getName
+activate Customer
+Customer --> CustomerDaoImpl
+deactivate Customer
+CustomerDaoImpl -> Customer : getEmail
+activate Customer
+Customer --> CustomerDaoImpl
+deactivate Customer
+CustomerDaoImpl -> Customer : getBirth
+activate Customer
+Customer --> CustomerDaoImpl
+deactivate Customer
+CustomerDaoImpl -> BaseDao : update
+activate BaseDao
+BaseDao -> JDBCUtils : getConnection
+activate JDBCUtils
+JDBCUtils --> BaseDao
+deactivate JDBCUtils
+BaseDao -> JDBCUtils : close
+activate JDBCUtils
+JDBCUtils --> BaseDao
+deactivate JDBCUtils
+BaseDao --> CustomerDaoImpl
+deactivate BaseDao
+CustomerDaoImpl --> CustomerDaoImpl
+deactivate CustomerDaoImpl
+CustomerDaoImpl --> CustomerDao
+deactivate CustomerDaoImpl
+CustomerDao --> AddCustomerServlet
+deactivate CustomerDao
+return
+@enduml

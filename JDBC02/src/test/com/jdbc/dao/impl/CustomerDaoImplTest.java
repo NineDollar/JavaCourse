@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * CustomerDaoImpl Tester.
+ * <p>CustomerDaoImpl Tester.</p>
  *
  * @author NineDollar
  * @version 1.0
@@ -16,30 +16,43 @@ import org.junit.Test;
  */
 public class CustomerDaoImplTest {
 
+  /**
+   * <p>前置条件：.</p>
+   *
+   * @throws Exception 异常
+   */
   @Before
   public void before() throws Exception {
     System.out.println("before......");
   }
 
+  /**
+   * <p>后置条件：.</p>
+   *
+   * @throws Exception 异常
+   */
   @After
   public void after() throws Exception {
     System.out.println("after......");
   }
 
   /**
-   * Method: add(Customer customer)
+   * <p>Method: add(Customer customer).</p>
    */
   @Test
   public void testAdd() throws Exception {
+    // 创建Customer对象
     Customer customer =
         new Customer("张三", "zhangshan@qq.com", JDBCUtils.changeToData("1992-12-12"));
+    // 创建CustomerDaoImpl对象
     CustomerDaoImpl customerDao = new CustomerDaoImpl();
+    // 添加
     customerDao.add(customer);
     System.out.println("add success");
   }
 
   /**
-   * Method: update(Customer customer)
+   * <p>Method: update(Customer customer).</p>
    */
   @Test
   public void testUpdate() throws Exception {
@@ -50,7 +63,7 @@ public class CustomerDaoImplTest {
   }
 
   /**
-   * Method: delete(int id)
+   * <p>Method: delete(int id).</p>
    */
   @Test
   public void testDelete() throws Exception {
@@ -60,7 +73,7 @@ public class CustomerDaoImplTest {
   }
 
   /**
-   * Method: queryById(int id)
+   * <p>Method: queryById(int id).</p>
    */
   @Test
   public void testQueryById() throws Exception {
@@ -70,7 +83,7 @@ public class CustomerDaoImplTest {
   }
 
   /**
-   * Method: queryAll()
+   * <p>Method: queryAll().</p>
    */
   @Test
   public void testQueryAll() throws Exception {
@@ -81,7 +94,7 @@ public class CustomerDaoImplTest {
   }
 
   /**
-   * Method: getCount()
+   * <p>Method: getCount().</p>
    */
   @Test
   public void testGetCount() throws Exception {
