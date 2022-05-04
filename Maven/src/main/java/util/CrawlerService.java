@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 import org.jsoup.Jsoup;
 
 /**
- * <p><p>
+ * <p>解析dy网页视频地址<p>
  *
  * @author NineDollar
  * @version 1.0
