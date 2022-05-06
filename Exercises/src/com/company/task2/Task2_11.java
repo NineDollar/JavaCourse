@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
  * @ClassName Task2_11 @Author NineDollar @Date 2022/4/4 19:24 @Version 1.0 @Description TODO
  */
 public class Task2_11 {
+
   private static final String OK = "ok";
   private static final int SCORES = 10;
 
@@ -52,14 +53,18 @@ public class Task2_11 {
     scoreShow.showByFinalScore();
   }
 
-  /** 选手对象 */
+  /**
+   * 选手对象
+   */
   static class Person implements Comparable {
+
     private String id; // 选手编号
     private String name; // 选手姓名
     private double[] score; // 选手成绩
     private double finalScore; // 选手总分
 
-    public Person() {}
+    public Person() {
+    }
 
     public Person(String id, String name, double[] score) {
       this.id = id;
@@ -121,8 +126,11 @@ public class Task2_11 {
     }
   }
 
-  /** 检录对象 */
+  /**
+   * 检录对象
+   */
   static class DataPerson {
+
     // 存储多个选手对象
     List<Person> allPersons = new ArrayList<>();
 
@@ -142,8 +150,11 @@ public class Task2_11 {
     }
   }
 
-  /** 评分统计对象 */
+  /**
+   * 评分统计对象
+   */
   static class FinalScore {
+
     // 给选手打分
     public void setFinalScore(Person person) {
       double[] score = person.getScore();
@@ -155,8 +166,11 @@ public class Task2_11 {
     }
   }
 
-  /** 分数显示对象 */
+  /**
+   * 分数显示对象
+   */
   static class ShowScore {
+
     DataPerson dataPerson;
 
     public ShowScore(DataPerson dataPerson) {
@@ -169,6 +183,8 @@ public class Task2_11 {
       dataPerson.getAllPersons().stream()
           .sorted(Comparator.comparing(Person::getId))
           .forEach(System.out::println);
+
+//      dataPerson.getAllPersons().sort(Comparator.comparing(Person::getId));
     }
 
     // 按照选手总分降序显示

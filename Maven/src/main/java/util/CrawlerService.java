@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 import org.jsoup.Jsoup;
 
 /**
- * <p>解析dy网页视频地址<p>
+ * <p>解析dy网页视频地址.</p>
  *
  * @author NineDollar
  * @version 1.0
@@ -15,10 +15,11 @@ import org.jsoup.Jsoup;
  */
 public class CrawlerService {
 
-  public void getVideoAddressForDy() {
+  public static void getVideoAddressForDy() {
     try {
       // String url1 = "#在抖音，记录美好生活# https://v.douyin.com/qsSFEV/ 复制此链接， 打开【抖音短视频】，直接观看视频！";
       // String url1 = "https://www.iesdouyin.com/share/video/6943940575011867908/?region=&mid=6943940627499764488&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&titleType=title";
+//      String url1 = "https://www.iesdouyin.com/share/video/6923835539430952206/?region=&mid=6916416675407579912&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&titleType=title";
       String url1 = "https://www.iesdouyin.com/share/video/6923835539430952206/?region=&mid=6916416675407579912&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&titleType=title";
       //过滤链接，获取视频连接地址
       String dyUrl = decodeDyUrl(url1);
@@ -64,7 +65,7 @@ public class CrawlerService {
     }
   }
 
-  private String decodeDyUrl(String url) {
+  private static String decodeDyUrl(String url) {
     int start = url.indexOf("http");
     int end = url.lastIndexOf("/");
     return url.substring(start, end);
