@@ -8,12 +8,36 @@ package com.company.learn;
  * @since 2022/5/5
  */
 public class InterfaceAnonymous {
-  interface Cubic{
+
+  interface Cubic {
 
     double getCubic(double x);
   }
- 
-  public static void main(String[] args) {
 
+  static class A {
+
+    void f(Cubic cubic) {
+      double result = cubic.getCubic(3);
+      System.out.println("result=" + result);
+    }
+  }
+
+  public static void main(String[] args) {
+    Cubic cu = new Cubic() {
+      @Override
+      public double getCubic(double x) {
+        return x * x * x;
+      }
+    };
+    double m = cu.getCubic(5);
+    System.out.println("m=" + m);
+
+    A a = new A();
+    a.f(new Cubic() {
+      @Override
+      public double getCubic(double x) {
+        return x * x * x;
+      }
+    });
   }
 }

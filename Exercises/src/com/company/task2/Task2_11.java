@@ -181,7 +181,7 @@ public class Task2_11 {
     public void showById() {
       // 指定比较
       dataPerson.getAllPersons().stream()
-          .sorted(Comparator.comparing(Person::getId))
+          .sorted(Comparator.comparing(Person::getId).reversed())
           .forEach(System.out::println);
 
 //      dataPerson.getAllPersons().sort(Comparator.comparing(Person::getId));
