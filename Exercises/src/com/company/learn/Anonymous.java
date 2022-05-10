@@ -33,7 +33,7 @@ public class Anonymous {
     student.f(new Speak() {
       @Override
       public void speakHello() {
-        System.out.println("I am is Student.");
+        System.out.println("I am is Student3_4.");
       }
     });
   }

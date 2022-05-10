@@ -29,8 +29,5 @@ public class MyDeclimalFormat {
     } catch (ParseException e) {
       e.printStackTrace();
     }
-
-
   }
-
 }
