@@ -41,7 +41,6 @@ public final class BoHaiStudent extends Student {
     return "韩剧";
   }
 
-  @SuppressWarnings("checkstyle:Indentation")
   @Override
   public String toString() {
     String[] header = {"姓名", "性别", "年龄", "家庭住址", "学校名字",
